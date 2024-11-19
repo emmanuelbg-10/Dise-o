@@ -1,2 +1,2 @@
-# Dise-o
-Cosas de diseño
+# Diseno
+Cosas de diseno

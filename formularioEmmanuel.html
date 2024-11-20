@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulario de Registro Emmanuel</title>
+</head>
+
+<body>
+  <h1>Formulario de registro</h1>
+  <form>
+    <fieldset>
+      <legend>Datos personales</legend>
+      <br>
+      <label for="nombre">*Nombre:</label><br />
+      <input type="text" id="nombre" name="nombre" maxlength="25" required /><br /><br />
+
+      <label for="apellidos">* Apellidos:</label><br />
+      <input type="text" id="apellidos" name="apellidos" maxlength="25" required /><br /><br />
+
+      <label>* Género:</label><br />
+      <input type="radio" id="masculino" name="genero" value="Masculino" required />Masculino
+      <input type="radio" id="femenino" name="genero" value="Femenino" required />Femenino
+      <input type="radio" id="otro" name="genero" value="Otro" required />
+      Otro<br /><br />
+
+      <label for="fecha-nacimiento">* Fecha de nacimiento:
+        <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" max="2002-12-31" required /><br /><br />
+      </label>
+    </fieldset>
+
+
+    <fieldset>
+      <br>
+      <legend>Datos de contacto</legend>
+      <label for="correo">* Correo electrónico:</label><br />
+      <input type="email" id="correo" name="correo" required /><br /><br />
+
+      <label for="telefono">Teléfono:</label><br />
+      <input type="tel" id="telefono" name="telefono" pattern="\d{3}-\d{3}-\d{3}"
+        placeholder="666-666-666" /><br /><br />
+    </fieldset>
+
+
+    <fieldset>
+      <br>
+      <legend>Dirección postal</legend>
+      <label for="direccion1">* Dirección 1:
+        <input type="text" id="direccion1" name="direccion1" maxlength="50" pattern="[A-Za-záéíóúÁÉÍÓÚñÑçÇ\s]+"
+          required /><br /><br />
+      </label>
+
+      <label for="direccion2">Dirección 2:
+        <input type="text" id="direccion2" name="direccion2" maxlength="20"
+          pattern="[A-Za-záéíóúÁÉÍÓÚñÑçÇ\s]+" /><br /><br />
+      </label>
+
+      <label for="provincia">* Provincia:
+        <select id="provincia" name="provincia" required>
+          <option value="" disabled selected>Provincia, Abreviatura</option>
+          <option value="Álava">Álava, VI</option>
+          <option value="Albacete">Albacete, AB</option>
+          <option value="Alacant">Alacant, A</option>
+          <option value="Almería">Almería, AL</option>
+          <option value="Ávila">Ávila, AV</option>
+          <option value="Badajoz">Badajoz, BA</option>
+          <option value="Illes Balears">Illes Balears, PM</option>
+          <option value="Barcelona">Barcelona, B</option>
+          <option value="Burgos">Burgos, BU</option>
+          <option value="Cáceres">Cáceres, CC</option>
+          <option value="Cádiz">Cádiz, CA</option>
+          <option value="Castellón">Castellón, CS</option>
+          <option value="Ciudad Real">Ciudad Real, CR</option>
+          <option value="Córdoba">Córdoba, CO</option>
+          <option value="A Coruña">A Coruña, C</option>
+          <option value="Cuenca">Cuenca, CU</option>
+          <option value="Girona">Girona, GI</option>
+          <option value="Granada">Granada, GR</option>
+          <option value="Guadalajara">Guadalajara, GU</option>
+          <option value="Guipúzcoa">Guipúzcoa, SS</option>
+          <option value="Huelva">Huelva, H</option>
+          <option value="Huesca">Huesca, HU</option>
+          <option value="Jaén">Jaén, J</option>
+          <option value="León">León, LE</option>
+          <option value="Lleida">Lleida, L</option>
+          <option value="La Rioja">La Rioja, LO</option>
+          <option value="Lugo">Lugo, LU</option>
+          <option value="Madrid">Madrid, M</option>
+          <option value="Málaga">Málaga, MA</option>
+          <option value="Murcia">Murcia, MU</option>
+          <option value="Navarra">Navarra, NA</option>
+          <option value="Ourense">Ourense, OR</option>
+          <option value="Asturias">Asturias, O</option>
+          <option value="Palencia">Palencia, P</option>
+          <option value="Las Palmas">Las Palmas, GC</option>
+          <option value="Pontevedra">Pontevedra, PO</option>
+          <option value="Salamanca">Salamanca, SA</option>
+          <option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife, TF</option>
+          <option value="Cantabria">Cantabria, S</option>
+          <option value="Segovia">Segovia, SG</option>
+          <option value="Sevilla">Sevilla, SE</option>
+          <option value="Soria">Soria, SO</option>
+          <option value="Tarragona">Tarragona, T</option>
+          <option value="Teruel">Teruel, TE</option>
+          <option value="Toledo">Toledo, TO</option>
+          <option value="Valencia">Valencia, V</option>
+          <option value="Valladolid">Valladolid, VA</option>
+          <option value="Vizcaya">Vizcaya, BI</option>
+          <option value="Zamora">Zamora, ZA</option>
+          <option value="Zaragoza">Zaragoza, Z</option>
+          <option value="Ceuta">Ceuta, CE</option>
+          <option value="Melilla">Melilla, ML</option>
+        </select><br /><br />
+      </label>
+
+      <label for="ciudad">* Ciudad:
+        <input type="text" id="ciudad" name="ciudad" maxlength="40" pattern="[A-Za-záéíóúÁÉÍÓÚñÑçÇ\s]+"
+          required /><br /><br />
+      </label>
+    </fieldset>
+
+    <p>* Valor requerido</p>
+    <button type="submit">Registrar</button><br /><br />
+
+  </form>
+</body>
+
+</html>

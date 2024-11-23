@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Elementos HTML</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -45,7 +46,7 @@
   </ul>
 
   <h2>Object</h2>
-  <object data="video.mp4" width="400" height="300"></object>
+  <object data="video/video.mp4" width="400" height="300"></object>
   <p>El elemento "object" permite incrustar recursos externos, como imágenes, videos o aplicaciones interactivas.</p>
   <ul>
     <li><strong>data</strong>: URL del archivo a incrustar.</li>
@@ -54,7 +55,7 @@
   </ul>
 
   <h2>Param</h2>
-  <object data="video.mp4" type="video/mp4" width="400" height="300">
+  <object data="video/video.mp4" type="video/mp4" width="400" height="300">
     <!-- Algunos navegadores tienen restricciones de autoplay (por ejemplo, bloquean la reproducción automática si no hay interacción del usuario o si el video contiene sonido). -->
     <param name="autoplay" value="true">
     <param name="controls" value="true">
@@ -102,8 +103,8 @@
 
   <h2>Track</h2>
   <video controls width="500" height="300">
-    <source src="video2.mp4" type="video/mp4">
-    <track src="subtitles.vtt" kind="subtitles" srclang="es" label="Spanish" default>
+    <source src="video/video2.mp4" type="video/mp4">
+    <track src="subtitles/subtitles.vtt" kind="subtitles" srclang="es" label="Spanish">
   </video>
   <p>El elemento "track" añade subtítulos, descripciones o capítulos a elementos "video" o "audio".</p>
   <ul>
@@ -129,7 +130,7 @@
   </ul>
 
   <h2>Map</h2>
-  <img src="planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+  <img src="images/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
 
   <map name="planetmap">
     <area shape="rect" coords="0,0,82,126" alt="Sun" href="https://es.wikipedia.org/wiki/Sol">

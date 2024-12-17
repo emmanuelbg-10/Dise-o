@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página con Aside fijo a la derecha</title>
+    <style>
+      /* Estilos generales */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        display: grid;
+        grid-template-columns: 3fr 1fr; /* 3 partes para contenido, 1 para aside */
+        gap: 1rem;
+      }
+
+      header {
+        grid-column: 1 / span 2; /* El header ocupa todo el ancho */
+        background-color: #333;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      nav {
+        grid-column: 1 / span 2; /* La barra de navegación también ocupa todo el ancho */
+        background-color: #444;
+        padding: 0.5rem;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin: 0 1rem;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        margin-top: 2rem; /* Espacio para la barra de navegación */
+        padding: 2rem;
+      }
+
+      section {
+        margin-bottom: 2rem;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 1rem;
+      }
+
+      article {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      aside {
+        background-color: #f1f1f1;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 1rem;
+
+        top: 2rem; /* Debajo de la barra de navegación */
+      }
+
+      aside img {
+        max-width: 100%; /* Ajusta el tamaño de la imagen */
+        border-radius: 5px;
+        display: block;
+        margin: 1rem auto; /* Centra la imagen dentro del aside */
+      }
+
+      footer {
+        grid-column: 1 / span 2; /* El footer ocupa todo el ancho */
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      footer a {
+        color: #ffcc00;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Página con Aside fijo a la derecha</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#Inicio">Inicio</a></li>
+        <li><a href="#Seccion1">Sección 1</a></li>
+        <li><a href="#Seccion2">Sección 2</a></li>
+      </ul>
+    </nav>
+    <main id="Inicio">
+      <section id="Seccion1">
+        <h2>Sección 1</h2>
+        <article>
+          <h3>Artículo 1</h3>
+          <p>Contenido del artículo 1. Lorem ipsum dolor sit amet.</p>
+        </article>
+        <article>
+          <h3>Artículo 2</h3>
+          <p>Contenido del artículo 2. Lorem ipsum dolor sit amet.</p>
+        </article>
+      </section>
+
+      <section id="Seccion2">
+        <h2>Sección 2</h2>
+        <article>
+          <h3>Artículo 3</h3>
+          <p>Contenido del artículo 3. Lorem ipsum dolor sit amet.</p>
+        </article>
+        <article>
+          <h3>Artículo 4</h3>
+          <p>Contenido del artículo 4. Lorem ipsum dolor sit amet.</p>
+        </article>
+      </section>
+    </main>
+    <aside>
+      <h3>Barra lateral</h3>
+      <p>Contenido adicional o enlaces útiles.</p>
+      <img
+        src="https://picsum.photos/200/300?grayscale"
+        alt="Imagen de ejemplo"
+      />
+    </aside>
+    <footer>
+      <p>
+        <a href="mailto:emmanuelbgiraldo@gmail.com">Correo</a> |
+        <a href="tel:690199425">Telefono Movil</a> |
+        <a href="https://youtube.com">YouTube</a> |
+        <a href="https://twitter.com">Twitter</a> |
+        <a href="https://facebook.com">Facebook</a>
+        <form action="" method="get">
+          <input name="Color" type="color" />
+        </form>
+        
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inputs Emmanuel</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+      .input-item {
+        text-align: center;
+        margin: 10px;
+      }
+      .input-item input {
+        display: block;
+        margin: 0 auto 5px auto;
+      }
+      .input-description {
+        font-size: 0.9em;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Inputs Emmanuel</h1>
+    </header>
+    <main>
+      <form action="" method="get">
+        <div class="input-item">
+          <input type="button" />
+          <span class="input-description">Botón simple</span>
+        </div>
+        <div class="input-item">
+          <input type="checkbox" />
+          <span class="input-description">Casilla de verificación</span>
+        </div>
+        <div class="input-item">
+          <input type="color" />
+          <span class="input-description">Selector de color</span>
+        </div>
+        <div class="input-item">
+          <input type="date" />
+          <span class="input-description">Fecha</span>
+        </div>
+        <div class="input-item">
+          <input type="datetime-local" />
+          <span class="input-description">Fecha y hora</span>
+        </div>
+        <div class="input-item">
+          <input type="email" />
+          <span class="input-description">Correo electrónico</span>
+        </div>
+        <div class="input-item">
+          <input type="file" />
+          <span class="input-description">Subir archivo</span>
+        </div>
+        <div class="input-item">
+          <input type="hidden" />
+          <span class="input-description">Campo oculto</span>
+        </div>
+        <div class="input-item">
+          <input type="image" />
+          <span class="input-description">Imagen como botón</span>
+        </div>
+        <div class="input-item">
+          <input type="month" />
+          <span class="input-description">Mes y año</span>
+        </div>
+        <div class="input-item">
+          <input type="number" />
+          <span class="input-description">Número</span>
+        </div>
+        <div class="input-item">
+          <input type="password" />
+          <span class="input-description">Contraseña</span>
+        </div>
+        <div class="input-item">
+          <input type="radio" />
+          <span class="input-description">Botón de opción</span>
+        </div>
+        <div class="input-item">
+          <input type="range" />
+          <span class="input-description">Rango</span>
+        </div>
+        <div class="input-item">
+          <input type="reset" />
+          <span class="input-description">Reiniciar formulario</span>
+        </div>
+        <div class="input-item">
+          <input type="search" />
+          <span class="input-description">Campo de búsqueda</span>
+        </div>
+        <div class="input-item">
+          <input type="submit" />
+          <span class="input-description">Enviar formulario</span>
+        </div>
+        <div class="input-item">
+          <input type="tel" />
+          <span class="input-description">Número de teléfono</span>
+        </div>
+        <div class="input-item">
+          <input type="text" />
+          <span class="input-description">Texto</span>
+        </div>
+        <div class="input-item">
+          <input type="time" />
+          <span class="input-description">Hora</span>
+        </div>
+        <div class="input-item">
+          <input type="url" />
+          <span class="input-description">URL</span>
+        </div>
+        <div class="input-item">
+          <input type="week" />
+          <span class="input-description">Semana del año</span>
+        </div>
+
+        <div class="input-item">
+          <!-- <input type="text" pattern="^[a-zA-Z]+([a-zA-Z]+)*$" /> -->
+          <input
+            type="text"
+            pattern="^[0-9]{3}-[0-9]{2}-[0-9]{2}-[0-9]{2}$"
+            required
+          />
+          <span class="input-description">prueba</span>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

@@ -7,7 +7,6 @@
   .contenido-principal,
   .contenido-relacionado,
   .pie {
-    display: block; /* Asegura que estas secciones sean visibles */
     background-color: transparent; /* Elimina colores de fondo */
     height: auto; /* Ajusta el tamaño automáticamente */
     width: auto;

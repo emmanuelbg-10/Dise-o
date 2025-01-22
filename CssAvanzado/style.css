@@ -1,0 +1,22 @@
+@media print {
+  p {
+    display: block; /* Mostrar todos los textos de los párrafos al imprimir */
+  }
+
+  .cabecera div,
+  .contenido-principal,
+  .contenido-relacionado,
+  .pie {
+    display: block; /* Asegura que estas secciones sean visibles */
+    background-color: transparent; /* Elimina colores de fondo */
+    height: auto; /* Ajusta el tamaño automáticamente */
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Opcional: Eliminar márgenes de la página */
+  @page {
+    margin: 0;
+  }
+}

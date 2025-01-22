@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;900&display=swap');
+
+body {
+    margin: 0; 
+    font-family: 'Lato', sans-serif; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+}
+
+form {
+    width: 500px;
+    padding: 40px;
+    background-color: gainsboro;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    border-radius: 5px; /* Bordes redondeados opcionales */
+}
+
+legend {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  padding: 0.5em 0; 
+  font-weight: 300;
+  position: relative;
+}
+
+label::before {
+  content: '*';
+  color: red;
+  margin-right: 0.2em;
+  font-size: 1.2em;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+
+input {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: none;
+    border-bottom: 4px solid gray;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input:hover {
+    border-bottom-color: dodgerblue;
+}
+
+input:focus {
+    border-bottom-color: black;
+}
+
+button {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    background-color: whitesmoke;
+    border: none;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: dodgerblue;
+    color: white;
+}
+
+button:focus {
+    background-color: black;
+    color: white;
+}
+
+fieldset {
+  border: none;
+}
+
+.input-icon {
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.input-icon i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: gray;
+}
+
+.input-icon input {
+  padding-left: 2.5em;
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 1em;
+  border: none;
+  border-bottom: 4px solid gray;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.input-icon input:hover {
+  border-bottom-color: dodgerblue;
+}
+
+.input-icon input:focus {
+  border-bottom-color: black;
+}

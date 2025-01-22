@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diseño Responsivo</title>
+    <style>
+      p {
+        display: none;
+      }
+
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Estructura general */
+      .cabecera {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        padding-top: 0%;
+        flex-direction: column; /* En móvil apilados */
+      }
+
+      .cabecera div {
+        background-color: #ff9900;
+        height: 50px;
+      }
+
+      .contenido-principal {
+        background-color: #c4d20a;
+        margin: 10px;
+      }
+
+      .contenido-relacionado {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px;
+      }
+
+      .contenido-relacionado div {
+        background-color: #3d85c6;
+        height: 100px;
+      }
+
+      .pie {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px;
+      }
+
+      .pie div {
+        background-color: #595959;
+        height: 50px;
+      }
+
+      /* Tablet */
+      @media (min-width: 321px) {
+        .contenido-principal {
+          height: 200px;
+        }
+
+        .contenido-relacionado div {
+          height: 80px;
+        }
+
+        .pie {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+
+        .pie div {
+          height: 100px;
+        }
+      }
+
+      /* Escritorio */
+      @media (min-width: 769px) {
+        .cabecera {
+          flex-direction: row; /* Alineación en fila */
+        }
+
+        .cabecera div {
+          height: 100px;
+          width: 100%;
+        }
+
+        .contenido-principal {
+          margin-top: 10px;
+          height: 300px;
+        }
+
+        .contenido-relacionado {
+          flex-direction: row;
+          justify-content: space-between;
+        }
+
+        .contenido-relacionado div {
+          margin-top: 15px;
+          height: 200px;
+          flex: 1;
+        }
+
+        .pie {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .pie div {
+          margin-top: 20px;
+          flex: 1;
+          height: 150px;
+        }
+      }
+
+      /* Móvil */
+      @media (max-width: 320px) {
+        .contenido-principal {
+          height: 80px; /* Altura ajustada para móvil */
+        }
+
+        .contenido-relacionado div {
+          height: 200px;
+        }
+
+        .pie div {
+          display: none; /* Ocultamos todos los divs del pie */
+        }
+
+        .pie div:first-child {
+          display: block; /* Mostramos solo el primer div */
+        }
+      }
+
+      @media print {
+        p {
+          display: block; /* Mostrar todos los textos de los párrafos al imprimir */
+        }
+
+        .cabecera div,
+        .contenido-principal,
+        .contenido-relacionado,
+        .pie {
+          display: block; /* Asegura que estas secciones sean visibles */
+          background-color: transparent; /* Elimina colores de fondo */
+          height: auto; /* Ajusta el tamaño automáticamente */
+          width: auto;
+          margin: 0;
+          padding: 0;
+        }
+
+        /* Opcional: Eliminar márgenes de la página */
+        @page {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="cabecera">
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
+          perferendis eum debitis ut soluta rerum, quasi totam libero animi iure
+          delectus, voluptatem quod voluptatum accusantium pariatur dolores in,
+          commodi optio!
+        </p>
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus
+          iste aspernatur veniam, dolorum eos ipsam quia nisi quis ex similique
+          beatae qui maxime non! Ipsam nam harum iure fugiat at.
+        </p>
+      </div>
+    </header>
+    <main>
+      <section class="contenido-principal">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima eaque
+          animi debitis nulla, placeat quas voluptate, autem beatae eligendi
+          sequi impedit nesciunt officia, incidunt sit assumenda doloribus
+          consectetur officiis! Corrupti.
+        </p>
+      </section>
+      <aside class="contenido-relacionado">
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+            velit suscipit quas adipisci. Delectus voluptates facilis, veritatis
+            quidem exercitationem eum, at provident praesentium veniam
+            voluptatibus minus animi. Similique, laborum pariatur.
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis
+            neque est sed eveniet cupiditate aperiam totam voluptatem ipsum
+            veritatis, obcaecati amet corrupti sequi repellendus doloremque
+            repellat. Qui id amet aspernatur?
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci
+            voluptatibus est quae rem ad cum at dolorem asperiores repellat,
+            illum eos debitis sit aliquam doloribus repellendus itaque cumque
+            facere. Delectus.
+          </p>
+        </div>
+      </aside>
+    </main>
+    <footer class="pie">
+      <div>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi
+          voluptatem totam, aperiam qui itaque, quas necessitatibus perferendis
+          perspiciatis aut laudantium voluptatibus, consectetur aliquam quam
+          iusto. Quis temporibus quas quasi placeat.
+        </p>
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
+          deserunt eligendi amet, in nam quisquam iure nesciunt maiores fugit
+          quos quis dicta ad adipisci dolorem vitae corporis doloremque?
+          Consequatur, impedit!
+        </p>
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed aut
+          consequatur quo magni possimus dolorum beatae necessitatibus ut, quas,
+          commodi quos officia perspiciatis eligendi veniam optio distinctio.
+          Est, eveniet ex.
+        </p>
+      </div>
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+          esse expedita facilis! Amet quidem iure dignissimos obcaecati rem eius
+          qui similique distinctio soluta nobis. Ea facere ut praesentium
+          officia dicta.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

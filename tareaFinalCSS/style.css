@@ -1,0 +1,171 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  color: #555555;
+  background: linear-gradient(#FFFFFF, #CEDDF8);
+  margin: 0;
+  padding: 0;
+}
+
+header[role="banner"] {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+header[role="banner"] img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+header[role="banner"] span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+main {
+  padding: 20px;
+}
+
+main header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #333333;
+}
+
+main header p {
+  font-size: 16px;
+  color: #555555;
+}
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+article {
+  flex: 1 1 calc(25% - 20px);
+  transition: opacity 1s;
+  opacity: 0.5;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+article:hover {
+  opacity: 1;
+}
+
+article#gold {
+  background-color: gold;
+}
+
+article#brown {
+  background-color: brown;
+}
+
+article#blueviolet {
+  background-color: blueviolet;
+}
+
+article#midnightblue {
+  background-color: midnightblue;
+}
+
+footer {
+  padding: 20px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+form label {
+  flex: 1 1 100%;
+  font-size: 16px;
+  color: #333333;
+}
+
+form input[type="email"] {
+  flex: 1 1 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  background-color: #DDDDDD;
+  transition: background-color 1s;
+}
+
+form input[type="email"]:focus {
+  background-color: #FFFFFF;
+}
+
+form input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color:  midnightblue;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 1s, border-radius 1s;
+  opacity: 0.5;
+}
+
+form input[type="submit"]:hover {
+  opacity: 1;
+  border-radius: 10px;
+}
+
+footer span {
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  color: #555555;
+}
+
+a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+legend {
+  font-weight: bold;
+  color:  midnightblue;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  article {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  article {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  form label,
+  form input[type="email"],
+  form input[type="submit"] {
+    flex: 1 1 100%;
+  }
+
+  form input[type="submit"] {
+    width: 100%;
+  }
+}

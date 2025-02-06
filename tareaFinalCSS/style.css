@@ -10,19 +10,24 @@ body {
 }
 
 header[role="banner"] {
-  display: flex;
+  display: block;
   align-items: center;
   padding-left: 20px;
 }
 
 header[role="banner"] img {
   height: 50px;
-  margin-right: 5px;
 }
 
 header[role="banner"] span {
   text-transform: uppercase;
   font-weight: bold;
+}
+
+header[role="banner"] img,
+header[role="banner"] span {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 main {
